@@ -53,6 +53,10 @@
 #include "riscv64-gen.c"
 #include "riscv64-link.c"
 #include "riscv64-asm.c"
+#elif defined(TCC_TARGET_S390X)
+#include "s390x-gen.c"
+#include "s390x-link.c"
+#include "s390x-asm.c"
 #else
 #error unknown target
 #endif
@@ -1785,6 +1789,8 @@ static const char dumpmachine_str[] =
     "aarch64"
 #elif defined TCC_TARGET_RISCV64
     "riscv64"
+#elif defined TCC_TARGET_S390X
+    "s390x"
 #endif
     "-"
 #ifdef TCC_TARGET_PE

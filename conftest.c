@@ -15,6 +15,7 @@ const char *platform_macros[] = {
     "__ARM_EABI__",         "TCC_ARM_EABI",
     "__aarch64__",          "TCC_TARGET_ARM64",
     "__riscv",              "TCC_TARGET_RISCV64",
+    "__s390x",              "TCC_TARGET_S390X",
     "__APPLE__",            "TCC_TARGET_MACHO",
     "__FreeBSD__",          "TARGETOS_FreeBSD",
     "__FreeBSD_kernel__",   "TARGETOS_FreeBSD_kernel",
@@ -189,6 +190,8 @@ int _CRT_glob = 0;
 # define TRIPLET_ARCH "aarch64"
 #elif defined(__riscv) && defined(__LP64__)
 # define TRIPLET_ARCH "riscv64"
+#elif defined(__s390x)
+# define TRIPLET_ARCH "s390x"
 #else
 # define TRIPLET_ARCH "unknown"
 #endif

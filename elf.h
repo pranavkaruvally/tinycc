@@ -205,6 +205,7 @@ typedef struct
 #define EM_PPC		20		/* PowerPC */
 #define EM_PPC64	21		/* PowerPC 64-bit */
 #define EM_S390		22		/* IBM S390 */
+#define EM_S390X    23      /* IBM S390X */
 
 #define EM_V800		36		/* NEC V800 series */
 #define EM_FR20		37		/* Fujitsu FR20 */
@@ -3321,5 +3322,13 @@ typedef Elf32_Addr Elf32_Conflict;
 
 #define R_RISCV_NUM		62
 
+/* S390X relocations. */
+#define R_S390X_NONE        0
+#define R_S390X_32          1
+#define R_S390X_64          2
+#define R_S390X_JUMP_SLOT   3
+#define R_S390X_COPY        4
+#define R_S390X_RELATIVE    5
+#define R_S390X_NUM         6
 
 #endif	/* elf.h */
