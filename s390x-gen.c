@@ -39,6 +39,8 @@
 
 #include "tcc.h"
 
+#include <signal.h> // To throw a signal if we hit an unimplemented function. TODO: REMOVE
+
 ST_DATA const char * const target_machine_defs = 
     "__s390x\0"
     "__s390x__\0"
@@ -86,30 +88,35 @@ ST_DATA int func_bound_add_epilog;
 ST_FUNC void gsym_addr(int t, int a)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void store(int r, SValue *sv)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void load(int r, SValue *sv)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gfunc_call(int nb_args)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 static void gen_opil(int op, int ll)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
@@ -126,66 +133,77 @@ ST_FUNC void gen_opl(int op)
 ST_FUNC void gen_opf(int op)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_cvt_csti(int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_cvt_sxtw(void)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_cvt_itof(int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_cvt_ftoi(int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_cvt_ftof(int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void ggoto(void)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_vla_sp_save(int addr)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_vla_sp_restore(int addr)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_vla_alloc(CType *type, int align)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gfunc_prolog(Sym *func_sym)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
@@ -193,18 +211,21 @@ ST_FUNC int gfunc_sret(CType *vt, int variadic, CType *ret,
                         int *ret_align, int *regsize)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return -1;
 }
 
 ST_FUNC void gfunc_epilog(void)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC void gen_fill_nops(int bytes)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
@@ -212,6 +233,7 @@ ST_FUNC void gen_fill_nops(int bytes)
 ST_FUNC int gjmp(int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return t;
 }
 
@@ -219,18 +241,21 @@ ST_FUNC int gjmp(int t)
 ST_FUNC void gjmp_addr(int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return;
 }
 
 ST_FUNC int gjmp_cond(int op, int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return gjmp(t);
 }
 
 ST_FUNC int gjmp_append(int n, int t)
 {
     /* Dummy function. TODO: Implement */
+    raise(SIGINT);
     return t;
 }
 
